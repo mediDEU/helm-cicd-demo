@@ -1,5 +1,5 @@
 substitutions:
-  _REGION: <zone>
+  _REGION: 'us-west1'
 steps:
 - name: 'gcr.io/k8s-skaffold/skaffold'
   entrypoint: 'sh'
