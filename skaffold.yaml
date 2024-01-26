@@ -24,11 +24,4 @@ profiles:
         chartPath: helm/stage
         valuesFiles:
          - helm/stage/values.yaml
-- name: prod
-  deploy:
-    helm:
-      releases:
-      - name: prodrelease
-        chartPath: helm/prod
-        valuesFiles:
-         - helm/prod/values.yaml
+
