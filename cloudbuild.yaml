@@ -9,7 +9,7 @@ steps:
   - |
     # Build and push images
     skaffold build --file-output=/workspace/artifacts.json \
-                   --default-repo=${_REGION}-docker.pkg.dev/$PROJECT_ID/github_medideu_helm-cicd-demo  \
+                   --default-repo=${_REGION}-docker.pkg.dev/$PROJECT_ID/helm-cicd-demo  \
                    --push=true
 - name: 'google/cloud-sdk:latest'
   entrypoint: 'sh'
@@ -26,7 +26,7 @@ steps:
                         --delivery-pipeline helm-cicd-pipeline \
                         --description "$(git log -1  --pretty='%s')" \
                         --build-artifacts /workspace/artifacts.json \
-                        --annotations "commit_ui=https://source.cloud.google.com/$PROJECT_ID/github_medideu_helm-cicd-demo /+/$COMMIT_SHA"
+                        --annotations "commit_ui=https://source.cloud.google.com/$PROJECT_ID/helm-cicd-demo /+/$COMMIT_SHA"
 artifacts:
   objects:
     location: 'gs://$PROJECT_ID-gceme-artifacts/'
