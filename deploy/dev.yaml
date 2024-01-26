@@ -6,4 +6,4 @@ metadata:
   labels: {}
 description: dev
 gke:
-  cluster: projects/<project-id>/locations/<zone>/clusters/helm-cd-testing-dev
+  cluster: projects/<project-id>/locations/us-west1/clusters/helm-cd-testing-dev
